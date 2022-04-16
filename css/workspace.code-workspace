@@ -1,0 +1,14 @@
+{
+  "folders": [
+	{
+		"path": "..\\.."
+	},
+	{
+		"path": "..\\..\\..\\CSS\\Sublight-Engines-Boilerplate\\images"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "frontend",
+    "liveServer.settings.port": 5501
+  }
+}
