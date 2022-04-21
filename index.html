@@ -11,23 +11,34 @@
 
   <!-- STYLESHEETS -->
   <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/menu.css">
+
 </head>
+
 
 <body>
   <!-- MAIN CONTENT -->
-  <header>
+ <div class="menu-wrap">
+   <input type="checkbox" class="toggler">
+   <div class="hamburger"><div></div></div>
+   <div class="menu">
+     <div>
+       <div>
+         <ul class="nav_links">
+           <li>
+            <li><a href="#hero">HERO</a></li>
+            <li><a href="#why">WHY US</a></li>
+            <li><a href="#security">OUR SERVICES</a></li>
+            <li><a href="#product">OUR PRODUCTS</a></li>
+            <li><a href="#trust">ABOUT US </a></li>
+            <li><a href="#address">CONTACT US</a></li>
+           </li>
+         </ul>
+       </div>
+     </div>
+   </div>
     <img class="logo" src="images/logo_sublight.svg" alt="logo" />
-    <nav>
-      <ul class="nav_links">
-        <li><a href="#hero">HERO</a></li>
-        <li><a href="#why">WHY US</a></li>
-        <li><a href="#security">OUR SERVICES</a></li>
-        <li><a href="#product">OUR PRODUCTS</a></li>
-        <li><a href="#trust">ABOUT US </a></li>
-        <li><a href="#address">CONTACT US </a></li>
-      </ul>
-    </nav>
-  </header>
+</div>
 
   <div id="hero" class="container-1">
     <div class="hero-content-wrapper">
@@ -49,11 +60,13 @@
     <div class="why-separator">
       <img src="images/separator.png" alt="separator" />
     </div>
-    <div class="why-icons">
-      <img class="design" src="images/design.svg" alt="icon design" />
-      <img src="images/build.svg" alt="icon design" />
-      <img class="maintenance" src="images/maintenance.svg" alt="icon design" />
+    <div class="why-content-wrapper">
+      <div class="why-icons">
+        <img class="design" src="images/design.svg" alt="icon design" />
+        <img class="build" src="images/build.svg" alt="icon design" />
+        <img class="maintenance" src="images/maintenance.svg" alt="icon design" />
     </div>
+  </div>
     <div class="why-text">
       <h3>we design</h3>
       <h2>we build</h2>
