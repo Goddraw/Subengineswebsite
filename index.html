@@ -13,6 +13,17 @@
   <link rel="stylesheet" href="css/main.css" />
   <link rel="stylesheet" href="css/menu.css">
 
+ <!-- Javascript -->
+<script> src='main.js'</script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script type="text/javascript">
+    (function() {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init('t3sHACgUK5SEnYck7');
+    })();
+</script>
+
 </head>
 
 
@@ -131,10 +142,11 @@
           <p>HOISTWAY/HATCH <br> Lorem ipsum dolor sit <br>  amet consectetur.</p>
         </div>
       </div>
+      
       <div class="product-button">
         <button>Download our catalog</button>
       </div>
-    </div>
+  </div>
 
     <div id="form" class="container-5">
       <div class="form-text">
@@ -147,28 +159,28 @@
       </div>
 
 
-      <form class="form-wrapper" method="GET" action="">
+      <form id="contact-form" class="form-wrapper"> 
         <div class="form-field">
           <div>
             <label for="fname">NAME*</label> <br>
-            <input type="text" id="fname" name="firstname" placeholder="Enter your full name">
+            <input type="text" id="fname" name="Full Name" placeholder="Enter your full name" required>
           </div>
           <div>
             <label for="email">EMAIL ADDRESS*</label> <br>
-            <input type="text" id="email" name="emailaddress" placeholder="yourname@company.com">
+            <input type="email" id="email" name="Email Address" placeholder="yourname@company.com" required>
           </div>
           <div>
             <label for="phone">PHONE NUMBER*</label>
-            <input type="text" id="phone" name="phonenumber" placeholder="0 (000) 000-0000">
+            <input type="text" id="phone" name="Phone Number" placeholder="0 (000) 000-0000" required>
             <label for="language">PREFERRED LANGUAGE*</label>
-            <select id="language" name="language">
+            <select id="language" name="Language" required>
             <option value="french">English</option>
             <option value="english">Français</option>
             </select>
           </div>
           <div class=submit>
-          <input type="submit" value="Submit">
-        </div>
+          <input onclick="sendMail()" type="submit" value="Submit">
+        </div>        
       </form>
     </div>
 
@@ -198,6 +210,24 @@
 
     <!-- FOOTER -->
     <footer>All rights reserved to CodeBoxx Solutions ©, 2022.</footer>
+
+    <!-- EmailJS -->
+    <script>
+    function sendMail(params) {
+      var tempParams ={
+          from_name: document.getElementById('fname').value,
+          to_name: "Eric",
+          email: document.getElementById('email').value,
+          phone: document.getElementById('phone').value,
+          language: document.getElementById('language').value,
+      };
+  
+      emailsjs.send('service_u26rjlm', 'template_1029ss1', tempParams)
+      .then(function(res) {
+          console.log("success", res.status);
+      })
+  }
+</script>
 </body>
 
 </html>

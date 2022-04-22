@@ -157,6 +157,10 @@ a {
   width: 100%;
 }
 
+/* .why-icons{
+  display: contents;
+} */
+
 .design{
 }
 .build{
@@ -444,9 +448,12 @@ footer {
   background: white;
 }
 
+/*Add background like top as fixed to the div and only on mobile, media query*/
 .product-button{
-  text-align: center;
-  padding-top: 40px;
+position: fixed;
+bottom: 100px;
+left: 50%;
+z-index: 2;
 }
 
 .product-button button{
@@ -646,4 +653,10 @@ textarea {
   /* Sublight Engines/Orange */
 
   color: #ff7630;
+}
+
+.bottom-wrapper{
+  background-color: #45a049;
+  width: 100%;
+  border: 1px black;
 }
