@@ -7,29 +7,30 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sublight Engines Elevators</title>
-  <meta name="description" content="" />
+  <meta name="robots" content="noindex" />
+  <meta name="keywords" content="elevators, business, quality">
+  <meta name="description" content="We cater your every need in the elevator industry!">
 
   <!-- STYLESHEETS -->
   <link rel="stylesheet" href="css/main.css" />
-  <link rel="stylesheet" href="css/menu.css">
-
- <!-- Javascript -->
-<script> src='main.js'</script>
+  <link rel="stylesheet" href="css/menu.css" />
 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 <script type="text/javascript">
     (function() {
         // https://dashboard.emailjs.com/admin/account
         emailjs.init('t3sHACgUK5SEnYck7');
+        console.log('Je suis ici')
     })();
+    
 </script>
-
 </head>
 
 
 <body>
   <!-- MAIN CONTENT -->
- <div class="menu-wrap">
+ <header>
+  <div class="menu-wrap">
    <input type="checkbox" class="toggler">
    <div class="hamburger"><div></div></div>
    <div class="menu">
@@ -50,6 +51,7 @@
    </div>
     <img class="logo" src="images/logo_sublight.svg" alt="logo" />
 </div>
+</header>
 
   <div id="hero" class="container-1">
     <div class="hero-content-wrapper">
@@ -72,16 +74,21 @@
       <img src="images/separator.png" alt="separator" />
     </div>
     <div class="why-content-wrapper">
-      <div class="why-icons">
-        <img class="design" src="images/design.svg" alt="icon design" />
-        <img class="build" src="images/build.svg" alt="icon design" />
-        <img class="maintenance" src="images/maintenance.svg" alt="icon design" />
+      <div class="design">
+        <img  src="images/design.svg" alt="icon design" />
+        <h3>we design</h3>
+      </div>
+        <div class="build">
+      <img  src="images/build.svg" alt="icon design" />
+      <h2>we build</h2>
+    </div>
+    <div class="maintenance"></div>
+        <img src="images/maintenance.svg" alt="icon design" />
+        <p>we maintain</p>
+      </div>
     </div>
   </div>
     <div class="why-text">
-      <h3>we design</h3>
-      <h2>we build</h2>
-      <p>we maintain</p>
     </div>
   </div>
 
@@ -102,8 +109,8 @@
           lectus parturient faucibus id.
         </p>
       </div>
-      <div class="security-photo">
-        <img src="images/bkg_2 1.png" alt="security" />
+      <div>
+        <img class="security-photo" src="images/bkg_2 1.png" alt="security" />
       </div>
     </div>
   </div>
@@ -179,7 +186,7 @@
             </select>
           </div>
           <div class=submit>
-          <input onclick="sendMail()" type="submit" value="Submit">
+          <button id="submit-button">Send Email</button>
         </div>        
       </form>
     </div>
@@ -191,7 +198,7 @@
       <div class="trust-image">
         <img src="images/signature.svg" alt="sublight-logo">
       </div>
-    </div>
+  </div>
     <div id="address" class="container-7">
 
       <div class="address1">
@@ -211,23 +218,7 @@
     <!-- FOOTER -->
     <footer>All rights reserved to CodeBoxx Solutions ©, 2022.</footer>
 
-    <!-- EmailJS -->
-    <script>
-    function sendMail(params) {
-      var tempParams ={
-          from_name: document.getElementById('fname').value,
-          to_name: "Eric",
-          email: document.getElementById('email').value,
-          phone: document.getElementById('phone').value,
-          language: document.getElementById('language').value,
-      };
-  
-      emailsjs.send('service_u26rjlm', 'template_1029ss1', tempParams)
-      .then(function(res) {
-          console.log("success", res.status);
-      })
-  }
-</script>
-</body>
-
+     <!-- Javascript -->
+    <script src='js/main.js'></script>
+  </body>
 </html>
